@@ -36,5 +36,7 @@ public class Player : MonoBehaviour
     {
         var deltaY = Time.deltaTime * speed;
         transform.position = new Vector2(transform.position.x, transform.position.y + deltaY);
+        var deltaZ = Time.deltaTime * acceleration;
+        transform.Rotate(new Vector3(0f, 0f, deltaZ));
     }
 }
